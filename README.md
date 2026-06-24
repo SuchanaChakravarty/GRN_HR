@@ -2,15 +2,15 @@
 Contains Codes for SDE Simulations and Data analysis, and, Plot Generations.
 
 # adjacency matrices generating code 
-Purpose: Generates all unique 3 X 3 gene regulatory network structures (adjacency matrices) by filtering out isomorphic duplicates.
-Requirements: Jupyter Notebook, Julia, Combinatorics, and JLD2 packages.
-Output: unique_networks_table.jld2 (a file containing the structural library for your simulations).
-How to run: Open the .ipynb file in Jupyter, select the Julia kernel, and run all cells.
+1. Purpose: Generates all unique 3 X 3 gene regulatory network structures (adjacency matrices) by filtering out isomorphic duplicates.
+2. Requirements: Jupyter Notebook, Julia, Combinatorics, and JLD2 packages.
+3. Output: unique_networks_table.jld2 (a file containing the structural library for your simulations).
+4. How to run: Open the .ipynb file in Jupyter, select the Julia kernel, and run all cells.
 
 Implementation & Flags:
-Canonicalization: The script ensures that isomorphic networks (networks that are identical if nodes are re-labeled) are treated as the same, reducing the dataset to only unique functional structures.
-Data Format: The output is saved as an array of NamedTuples within the JLD2 file, making it easy to load as a structured table in your main simulation script.
-Performance: The script generates all 3^9 (19,683) possible 3x3 matrices with values in {-1, 0, 1}.The canonicalization process is computationally intensive as it checks all 3! = 6 permutations for every generated network.
+1. Canonicalization: The script ensures that isomorphic networks (networks that are identical if nodes are re-labeled) are treated as the same, reducing the dataset to only unique functional structures.
+2. Data Format: The output is saved as an array of NamedTuples within the JLD2 file, making it easy to load as a structured table in your main simulation script.
+3. Performance: The script generates all 3^9 (19,683) possible 3x3 matrices with values in {-1, 0, 1}.The canonicalization process is computationally intensive as it checks all 3! = 6 permutations for every generated network.
 
 # adjacency matrices data
 Input Data: The file unique_networks_table.jld2, which provides the pre-computed adjacency matrices for the gene regulatory networks.
