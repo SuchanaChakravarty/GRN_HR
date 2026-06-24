@@ -1,6 +1,9 @@
 # Impact-of-gene-regulatory-network-topology-on-heterogeneity-restoration
 Contains Codes for SDE Simulations and Data analysis, and, Plot Generations.
 
+# adjacency matrices data
+Input Data: The file unique_networks_table.jld2, which provides the pre-computed adjacency matrices for the gene regulatory networks.
+
 # code run_selected_net.jl : Purpose: Simulates stochastic 3-species gene networks and detects heterogeneous states using Gaussian Mixture Models.
 1. Dependencies: Julia 1.10+, Sundials (for ODEs), DifferentialEquations (for SDEs)and a Python environment with scikit-learn
 2. Outputs: multimodal_search_selected_1.h5 (trajectories) and multimodal_results_selected_1.csv (summary statistics)
