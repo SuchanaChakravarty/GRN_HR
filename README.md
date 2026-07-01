@@ -35,7 +35,7 @@ A Julia-based pipeline to process network simulation data, detect structural mot
 ## Features
 * **Data Processing**: Combines and sorts batch simulation results from CSV files.
 * **Visualization**: Generates trajectory plots and GMM-based density distributions (Fig 2B).
-* **Motif Analysis**: Detects feedback loops (positive, negative, pairwise) and incoherent feed-forward loops (iFFL) (Fig 2C-2H).
+* **Motif Analysis**: Detects feedback loops (positive, negative: Self-loops, pairwise loops, 3 node cyclic loop) and incoherent feed-forward loops (iFFL) (Fig 2C-2H).
 * **Statistical Inference**: Performs Fisher's exact tests and computes Odds Ratios to analyze motif-HR associations, visualized via heatmaps and stacked bar plots and edgewise network analysis.
   ## Requirements
 * **Julia** with `CSV`, `DataFrames`, `JLD2`, `HDF5`, `Plots`, `StatsBase`, `HypothesisTests`, `PyCall` (for scikit-learn GMM fitting).
