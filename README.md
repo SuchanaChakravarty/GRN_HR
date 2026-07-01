@@ -29,3 +29,13 @@ Implementation & Flags:
 2. Thread Safety:  scikit-learn is wrapped in a py_lock because Python functions are not thread-safe.
 3. The script internally enforces single-threading for NumPy and MKL (via os.environ flags). This prevents the "nested parallelism" performance bottleneck, where multiple threads compete for CPU resources.
 4. The script disables the Garbage Collector during heavy simulations to maintain speed. If you run out of memory, reduce Np (parameter sets) or Nt (trials).
+
+# Fig 2 Plotting code : Fig2_Plot.ipynb
+A Julia-based pipeline to process network simulation data, detect structural motifs, and visualize the impact of feedback and Feedforward loops on HR.
+## Features
+* **Data Processing**: Combines and sorts batch simulation results from CSV files.
+* **Visualization**: Generates trajectory plots and GMM-based density distributions (Fig 2B).
+* **Motif Analysis**: Detects feedback loops (positive, negative, pairwise) and incoherent feed-forward loops (iFFL) (Fig 2C-2H).
+* **Statistical Inference**: Performs Fisher's exact tests and computes Odds Ratios to analyze motif-HR associations, visualized via heatmaps and stacked bar plots and edgewise network analysis.
+  ## Requirements
+* **Julia** with `CSV`, `DataFrames`, `JLD2`, `HDF5`, `Plots`, `StatsBase`, `HypothesisTests`, `PyCall` (for scikit-learn GMM fitting).
