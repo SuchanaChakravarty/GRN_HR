@@ -53,4 +53,4 @@ A Julia-based pipeline to process network simulation data, detect structural mot
 * **Motif Analysis**: Detects feedback loops (positive, negative: Self-loops, pairwise loops, 3 node cyclic loop) and incoherent feed-forward loops (iFFL) (Fig 2C-2H).
 * **Statistical Inference**: Performs Fisher's exact tests and computes Odds Ratios to analyze motif-HR associations, visualized via heatmaps and stacked bar plots and edgewise network analysis.
   ## Requirements
-* **Julia** with `CSV`, `DataFrames`, `JLD2`, `HDF5`, `Plots`, `StatsBase`, `HypothesisTests`, `PyCall` (for scikit-learn GMM fitting).
+* **Julia** with `CSV`, `DataFrames`, `JLD2`, `HDF5`, `Sundials`, `DifferentialEquations`, `LatinHypercubeSampling`, `SpecialFunctions`, `PyCall` (for scikit-learn GMM fitting).
