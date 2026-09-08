@@ -51,7 +51,7 @@ Implementation & Flags:
 3. Run with: julia filter_by_min_fraction.jl.
 4. Config (edit at top of script): SUMMARY_CSV, OVERSHOOT_DIR, N_NETWORKS, OUT_DIR, THRESHOLD.
 5. Main output to use downstream: summary_clean.csv. Also writes why_this_threshold.txt, combined_table.csv, rows_removed.csv, threshold_sweep_plot.png.
-6. For precomputed-mode results, swap which overshoot-filename line is commented (near line 35, _op_ic suffix).
+6. For precomputed-mode results, swap which overshoot-filename line is commented (near line 65, _op_ic suffix).
    
 # Fig 2 Plotting code : Fig2_Plot.ipynb
 A Julia-based pipeline to process network simulation data, detect structural motifs, and visualize the impact of feedback and Feedforward loops on HR.
