@@ -45,6 +45,14 @@ Implementation & Flags:
 6. If no matching CSVs are found in DATA_DIR, the script prints a warning and skips IC extraction rather than erroring out.
 7. Overwrite behavior: both the summary CSV and the .dat file are overwritten without confirmation if they already exist at SUMMARY_CSV/OUT_DAT — back up first if you need to keep a prior version.
 
+# filter_by_min_fraction.jl : Step 3 of the pipeline. Removes (net_id, param_id) rows where the split between the two states is too imbalanced to trust as real bimodality (default: one state < 10%), and reports the sensitivity/specificity evidence behind that cutoff.
+1. Dependencies: Julia, CSV, DataFrames, Printf, Plots.
+2. Run after: run_selected_net.jl → combine_and_make_ic.jl. Needs their outputs (summary CSV + overshoot_results_net_*.csv).
+3. Run with: julia filter_by_min_fraction.jl.
+4. Config (edit at top of script): SUMMARY_CSV, OVERSHOOT_DIR, N_NETWORKS, OUT_DIR, THRESHOLD.
+5. Main output to use downstream: summary_clean.csv. Also writes why_this_threshold.txt, combined_table.csv, rows_removed.csv, threshold_sweep_plot.png.
+6. For precomputed-mode results, swap which overshoot-filename line is commented (near line 35, _op_ic suffix).
+   
 # Fig 2 Plotting code : Fig2_Plot.ipynb
 A Julia-based pipeline to process network simulation data, detect structural motifs, and visualize the impact of feedback and Feedforward loops on HR.
 ## Features
