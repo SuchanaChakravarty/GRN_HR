@@ -56,7 +56,7 @@ Implementation & Flags:
 # Fig 2 Plotting code : Fig2_Plot.ipynb
 A Julia-based pipeline to process network simulation data, detect structural motifs, and visualize the impact of feedback and Feedforward loops on HR.
 ## Features
-* **Data Processing**: Combines and sorts batch simulation results from CSV files.
+* **Data Load**: Use the summary CSV files.
 * **Visualization**: Generates trajectory plots and GMM-based density distributions (Fig 2B).
 * **Motif Analysis**: Detects feedback loops (positive, negative: Self-loops, pairwise loops, 3 node cyclic loop) and incoherent feed-forward loops (iFFL) (Fig 2C-2H).
 * **Statistical Inference**: Performs Fisher's exact tests and computes Odds Ratios to analyze motif-HR associations, visualized via heatmaps and stacked bar plots and edgewise network analysis.
